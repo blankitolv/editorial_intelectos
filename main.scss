@@ -1,0 +1,88 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+
+$bg-color: #ececec; // background-color
+$font-bg-active: rgb(165, 165, 165); // border-hover
+$hover-bg-color: rgb(48, 48, 48); // hover
+$border: #f5e5e5; // borde
+$font_color: rgb(70, 70, 70); // color letra
+$font-color-hover: rgb(223, 223, 223); // border-hover
+$border-hover-color: rgb(136, 136, 136); // border-hover
+
+.img-o-5 {
+  opacity:0.5;
+}
+.card-product {
+  transition: .2s;
+}
+.card-product-action {
+  bottom: 15%;
+  left: 50%;
+  opacity: 0;
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  transition: all .3s ease 0s;
+  visibility: hidden;
+  width: 100%;
+  z-index: 9;
+}
+.card-product .btn-action {
+  align-items: center;
+  background-color: var(--fc-white);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px -1px rgba(145,158,171,.2), 0 4px 5px 0 rgba(145,158,171,.14), 0 1px 10px 0 rgba(145,158,171,.12);
+  color: var(--fc-gray-800);
+  display: inline-flex;
+  font-size: 14px;
+  height: 34px;
+  justify-content: center;
+  line-height: 34px;
+  text-align: center;
+  transition: all .3s ease 0s;
+  vertical-align: middle;
+  width: 34px;
+}
+*, :after, :before {
+  box-sizing: border-box;
+}
+.bi::before, [class*=" bi-"]::before, [class^=bi-]::before {
+  display: inline-block;
+  font-family: bootstrap-icons!important;
+  font-style: normal;
+  font-weight: 400!important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -0.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.btn-action:hover {
+  background-color: var(--fc-primary);
+  color: var(--fc-white);
+}
+.btn-feature {
+  @include button-variant(
+    $bg-color,
+    $border,
+    $font_color,
+    $hover-bg-color,
+    $border-hover-color,
+    $font-color-hover,
+    $font-bg-active,
+    );
+
+  // optitional
+  // color: #fff; #uncomment and add your color
+}
+
+
+
+
+
+
+// Then add additional custom code here
